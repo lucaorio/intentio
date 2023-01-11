@@ -1,0 +1,256 @@
+;==============================================================================
+; config tutorials:
+; https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md
+; !  | mandatory
+; #  | optional
+; !! | mandatory command + control + optional + shift (hyper)
+; ## | optional any
+; C  | left_command
+; T  | left_control
+; O  | left_option
+; S  | left_shift
+; F  | fn
+; Q  | right_command
+; W  | right_control
+; E  | right_option
+; R  | right_shift
+;==============================================================================
+
+{
+  :devices {
+    :applekbd [
+      {:vendor_id 1452 :product_id 632}
+      {:vendor_id 1452 :product_id 832}
+    ]
+    :pok3rkbd [
+      {:vendor_id 1241 :product_id 321}
+      {:vendor_id 1241 :product_id 519}
+    ]
+    :keychron [
+      {:vendor_id 1452 :product_id 591}
+    ]
+  }
+
+  :applications {
+    :term ["^com\\.googlecode\\.iterm2$"]
+  }
+
+  :main [
+    {
+      ; rules for the apple keyboard to loosely map a pok3r layout
+      :des "applepok3r"
+      :rules [
+        ; remap right alt (option) and gui (command) to hyper
+        [:right_alt :!CTOleft_shift :applekbd]
+        [:right_gui :!CTOleft_shift :applekbd]
+
+        ; remap fn to left ctrl
+        [:fn :left_control :applekbd]
+
+        ; remap caps lock to fn
+        [:caps_lock :fn :applekbd]
+
+        ; hyper + escape to grave accent (`)
+        [:!!escape :grave_accent_and_tilde :applekbd]
+
+        ; hyper + shift + escape to tilde (~)
+        [:!!Sescape :!Sgrave_accent_and_tilde :applekbd]
+      ]
+    }
+
+    {
+      ; rules applicable solely to the pok3r keyboard
+      :des "pok3r"
+      :rules [
+        ; remap right alt (option)
+        [:right_alt :!CTOleft_shift :pok3rkbd]
+
+        ; hyper + escape to grave accent (`)
+        [:!!escape :grave_accent_and_tilde :pok3rkbd]
+
+        ; hyper + shift + escape to tilde (~)
+        [:!!Sescape :!Sgrave_accent_and_tilde :pok3rkbd]
+      ]
+    }
+
+    {
+      ; rules applicable solely to the keychron keyboard
+      :des "keychron"
+      :rules [
+        ; remap caps lock to fn
+        [:caps_lock :fn :keychron]
+
+        ; remap right gui (cmd) to hyper (ctrl+opt+cmd)
+        [:right_gui :!CTOleft_shift :keychron]
+
+        ; hyper + escape to grave accent (`)
+        [:!!escape :grave_accent_and_tilde :keychron]
+
+        ; hyper + shift + escape to tilde (~)
+        [:!!Sescape :!Sgrave_accent_and_tilde :keychron]
+      ]
+    }
+
+    {
+      :des "windows-layer"
+      :rules [
+        ; trigger layer
+        [:z ["windows-layer" 1] nil {:afterup ["windows-layer" 0] :alone :z}]
+
+        ; move window to space (n)
+        [:1 "/usr/local/bin/yabai -m window --space 1" ["windows-layer" 1]]
+        [:2 "/usr/local/bin/yabai -m window --space 2" ["windows-layer" 1]]
+        [:3 "/usr/local/bin/yabai -m window --space 3" ["windows-layer" 1]]
+        [:4 "/usr/local/bin/yabai -m window --space 4" ["windows-layer" 1]]
+        [:5 "/usr/local/bin/yabai -m window --space 5" ["windows-layer" 1]]
+        [:6 "/usr/local/bin/yabai -m window --space 6" ["windows-layer" 1]]
+        [:7 "/usr/local/bin/yabai -m window --space 7" ["windows-layer" 1]]
+        [:8 "/usr/local/bin/yabai -m window --space 8" ["windows-layer" 1]]
+        [:9 "/usr/local/bin/yabai -m window --space 9" ["windows-layer" 1]]
+        [:0 "/usr/local/bin/yabai -m window --space 10" ["windows-layer" 1]]
+
+        ; move window to new space (and focus on it or not)
+        [:hyphen "/usr/local/bin/yabai -m space --create && /usr/local/bin/yabai -m window --space last" ["windows-layer" 1]]
+        [:equal_sign "/usr/local/bin/yabai -m space --create && /usr/local/bin/yabai -m window --space last; /usr/local/bin/yabai -m space --focus last" ["windows-layer" 1]]
+
+        ; swap window position (north/west/south/east)
+        [:w "/usr/local/bin/yabai -m window --swap north" ["windows-layer" 1]]
+        [:a "/usr/local/bin/yabai -m window --swap west" ["windows-layer" 1]]
+        [:s "/usr/local/bin/yabai -m window --swap south" ["windows-layer" 1]]
+        [:d "/usr/local/bin/yabai -m window --swap east" ["windows-layer" 1]]
+
+        ; warp window insertion (north/west/south/east)
+        [:t "/usr/local/bin/yabai -m window --warp north" ["windows-layer" 1]]
+        [:f "/usr/local/bin/yabai -m window --warp west" ["windows-layer" 1]]
+        [:g "/usr/local/bin/yabai -m window --warp south" ["windows-layer" 1]]
+        [:h "/usr/local/bin/yabai -m window --warp east" ["windows-layer" 1]]
+
+        ; resize window region (north/west/south/east)
+        [:i "/usr/local/bin/yabai -m window --resize top:0:-40 && /usr/local/bin/yabai -m window --resize bottom:0:-40" ["windows-layer" 1]]
+        [:j "/usr/local/bin/yabai -m window --resize left:-40:0 && /usr/local/bin/yabai -m window --resize right:-40:0" ["windows-layer" 1]]
+        [:k "/usr/local/bin/yabai -m window --resize top:0:40 && /usr/local/bin/yabai -m window --resize bottom:0:40" ["windows-layer" 1]]
+        [:l "/usr/local/bin/yabai -m window --resize left:40:0 && /usr/local/bin/yabai -m window --resize right:40:0" ["windows-layer" 1]]
+
+        ; toggle window tiling (float/tiled)
+        [:delete_or_backspace "/usr/local/bin/yabai -m window --toggle float && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; float and resize window to center/rectangular
+        [:p "~/.config/shscripts/resize-center-mini.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; float and resize window to left/column
+        [:open_bracket "~/.config/shscripts/resize-left-col.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; float and resize window to right/column
+        [:close_bracket "~/.config/shscripts/resize-right-col.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; float and resize window to fullscreen (non-native)
+        [:backslash "~/.config/shscripts/resize-fullscreen.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; re-focus most recent active window
+        [:return_or_enter "/usr/local/bin/yabai -m window --focus recent" ["windows-layer" 1]]
+
+        ; toggle sticky mode
+        [:slash "~/.config/shscripts/toggle-sticky.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+
+        ; focus window (north/west/south/east)
+        [:up_arrow "/usr/local/bin/yabai -m window --focus north" ["windows-layer" 1]]
+        [:left_arrow "/usr/local/bin/yabai -m window --focus west" ["windows-layer" 1]]
+        [:down_arrow "/usr/local/bin/yabai -m window --focus south" ["windows-layer" 1]]
+        [:right_arrow "/usr/local/bin/yabai -m window --focus east" ["windows-layer" 1]]
+
+        ; flash focused window
+        [:spacebar "~/.config/shscripts/flash-focused.sh" ["windows-layer" 1]]
+      ]
+    }
+
+    {
+      :des "spaces-layer"
+      :rules [
+        ; trigger layer
+        [:x ["spaces-layer" 1] nil {:afterup ["spaces-layer" 0] :alone :x}]
+
+        ; focus space (n)
+        [:1 "/usr/local/bin/yabai -m space --focus 1" ["spaces-layer" 1]]
+        [:2 "/usr/local/bin/yabai -m space --focus 2" ["spaces-layer" 1]]
+        [:3 "/usr/local/bin/yabai -m space --focus 3" ["spaces-layer" 1]]
+        [:4 "/usr/local/bin/yabai -m space --focus 4" ["spaces-layer" 1]]
+        [:5 "/usr/local/bin/yabai -m space --focus 5" ["spaces-layer" 1]]
+        [:6 "/usr/local/bin/yabai -m space --focus 6" ["spaces-layer" 1]]
+        [:7 "/usr/local/bin/yabai -m space --focus 7" ["spaces-layer" 1]]
+        [:8 "/usr/local/bin/yabai -m space --focus 8" ["spaces-layer" 1]]
+        [:9 "/usr/local/bin/yabai -m space --focus 9" ["spaces-layer" 1]]
+        [:0 "/usr/local/bin/yabai -m space --focus 10" ["spaces-layer" 1]]
+
+        ; create/destroy space
+        [:hyphen "~/.config/shscripts/focus-and-destroy.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:equal_sign "/usr/local/bin/yabai -m space --create && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+
+        ; change space layout (floating[flt]/tiled[bsp])
+        [:delete_or_backspace "/usr/local/bin/yabai -m space --layout float && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:backslash "/usr/local/bin/yabai -m space --layout bsp && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+
+        ; move space (left/right)
+        [:open_bracket "/usr/local/bin/yabai -m space --move prev && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:close_bracket "/usr/local/bin/yabai -m space --move next && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+
+        ; focus space (most recently focused)
+        [:return_or_enter "/usr/local/bin/yabai -m space --focus recent" ["spaces-layer" 1]]
+
+        ; rotate (90deg), flip (horizontal/vertical), and balance space layout
+        [:m "/usr/local/bin/yabai -m space --rotate 90" ["spaces-layer" 1]]
+        [:comma "/usr/local/bin/yabai -m space --mirror x-axis" ["spaces-layer" 1]]
+        [:period "/usr/local/bin/yabai -m space --mirror y-axis" ["spaces-layer" 1]]
+        [:slash "/usr/local/bin/yabai -m space --balance" ["spaces-layer" 1]]
+
+        ; trigger mission control and show desktop, focus space (previous/next)
+        [:up_arrow "/usr/local/bin/yabai -m space --toggle mission-control" ["spaces-layer" 1]]
+        [:left_arrow "/usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m space --focus last" ["spaces-layer" 1]]
+        [:right_arrow "/usr/local/bin/yabai -m space --focus next || /usr/local/bin/yabai -m space --focus first" ["spaces-layer" 1]]
+        [:down_arrow "/usr/local/bin/yabai -m space --toggle show-desktop" ["spaces-layer" 1]]
+      ]
+    }
+
+   {
+      :des "media-layer"
+      :rules [
+        ; hyper + ,./ to audio media keys (in small increments)
+        [:!!comma :!OSvolume_decrement]
+        [:!!period :!OSvolume_increment]
+        [:!!slash :mute]
+
+        ; hyper + ; or ' to increase/decrease brightness (in small increments)
+        [:!!semicolon :!OSscroll_lock]
+        [:!!quote :!OSpause]
+
+        ; hyper + enter to turn on do not disturb mode (cmd+opt+d in sys settings)
+        [:!!return_or_enter :!COd]
+
+        ; hyper + ,./ to playback media keys
+        [:!!open_bracket :rewind]
+        [:!!close_bracket :fastforward]
+        [:!!backslash :play_or_pause]
+      ]
+    }
+
+    {
+      :des "launch-layer"
+      :rules [
+        ; trigger layer
+        [:slash ["launch-layer" 1] nil {:afterup ["launch-layer" 0] :alone :slash}]
+
+        ; open apps
+        [:a "open -a Music" ["launch-layer" 1]]
+        [:b "open -a Safari" ["launch-layer" 1]]
+        [:c "open -a 'Visual Studio Code'" ["launch-layer" 1]]
+        [:f "open -a Figma" ["launch-layer" 1]]
+        [:i "open -a iTerm" ["launch-layer" 1]]
+        [:m "open -a Mail" ["launch-layer" 1]]
+        [:o "open -a Obsidian" ["launch-layer" 1]]
+        [:s "open -a Slack" ["launch-layer" 1]]
+        [:t "open -a Things3" ["launch-layer" 1]]
+        [:comma "open -a 'System Preferences'" ["launch-layer" 1]]
+        [:spacebar "open -a Finder" ["launch-layer" 1]]
+      ]
+    }
+  ]
+}
