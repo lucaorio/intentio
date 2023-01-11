@@ -157,7 +157,7 @@ As an overview:
 - Space and space layout manipulation: *Karabiner → Shell script → Nero*
 - Window tiling: *Karabiner → Shell script → Nero*
 
-For a more granular understanding of events trigger a refresh, search for `refresh-uebersicht.sh` in the `yabairc` or `karabiner.kdn` files.
+For a more granular understanding of the events triggering a refresh, search for `refresh-uebersicht.sh` in the `yabairc` or `karabiner.kdn` files.
 
 
 ## License
