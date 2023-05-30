@@ -110,19 +110,19 @@ The media layer controls brightness, audio, and Do Not Disturb mode. The value o
 
 ![Media layer](images/media-layer.jpg)
 
-| Trigger | Hotkey            | Action                                    | Target |
-|---------|-------------------|-------------------------------------------|--------|
-| `cmd`   | `open_bracket`    | Previous media track                      | macOS  |
-| `cmd`   | `close_bracket`   | Next media track                          | macOS  |
-| `cmd`   | `backslash`       | Play/pause current track                  | macOS  |
-| `cmd`   | `semicolon`       | Decrease brightness (in small increments) | macOS  |
-| `cmd`   | `quote`           | Increase brightness (in small increments) | macOS  |
-| `cmd`   | `return_or_enter` | Toggle Do Not Disturb mode                | macOS  |
-| `cmd`   | `comma`           | Decrease volume (in small increments)     | macOS  |
-| `cmd`   | `period`          | Increase volume (in small increments)     | macOS  |
-| `cmd`   | `slash`           | Mute volume                               | macOS  |
+| Trigger | Hotkey            | Action                                    | Target                      |
+|---------|-------------------|-------------------------------------------|-----------------------------|
+| `cmd`   | `open_bracket`    | Previous media track                      | macOS (via custom shortcut) |
+| `cmd`   | `close_bracket`   | Next media track                          | macOS (via custom shortcut) |
+| `cmd`   | `backslash`       | Play/pause current track                  | macOS (via custom shortcut) |
+| `cmd`   | `semicolon`       | Decrease brightness (in small increments) | macOS (via custom shortcut) |
+| `cmd`   | `quote`           | Increase brightness (in small increments) | macOS (via custom shortcut) |
+| `cmd`   | `return_or_enter` | Toggle Do Not Disturb mode                | macOS (via custom shortcut) |
+| `cmd`   | `comma`           | Decrease volume (in small increments)     | macOS (via custom shortcut) |
+| `cmd`   | `period`          | Increase volume (in small increments)     | macOS (via custom shortcut) |
+| `cmd`   | `slash`           | Mute volume                               | macOS (via custom shortcut) |
 
-> Note: the `cmd` trigger is labeled as such not to confuse things. In reality, `cmd` (`left_option` on Pok3r) invokes a `hyper` key.
+> Note: the `cmd` trigger is labeled as such not to confuse things. In reality, `cmd` (`right_alt` on Pok3r or `right_gui` on Keychron) invokes a `hyper` key.
 > Make sure to remap the key close to the right side of `spacebar` int the keyboard profile at the top of Goku config.
 
 ### Launch layer
@@ -130,19 +130,19 @@ The launch layer bypasses tools such as Raycast or Alfred to accelerate the open
 
 ![Launch layer](images/launch-layer.jpg)
 
-| Trigger | Hotkey     | Action           | Target |
-|---------|------------|------------------|--------|
-| `cmd`   | `a`        | "Apple" Music    | macOS  |
-| `cmd`   | `b`        | "Browser" Safari | macOS  |
-| `cmd`   | `c`        | Code             | macOS  |
-| `cmd`   | `f`        | Figma            | macOS  |
-| `cmd`   | `i`        | iTerm            | macOS  |
-| `cmd`   | `m`        | Mail             | macOS  |
-| `cmd`   | `o`        | Obsidian         | macOS  |
-| `cmd`   | `s`        | Slack            | macOS  |
-| `cmd`   | `t`        | Things           | macOS  |
-| `cmd`   | `comma`    | macOS Settings   | macOS  |
-| `cmd`   | `spacebar` | Finder           | macOS  |
+| Trigger | Hotkey     | Action           | Target                |
+|---------|------------|------------------|-----------------------|
+| `slash` | `a`        | "Apple" Music    | macOS (via "open -a") |
+| `slash` | `b`        | "Browser" Safari | macOS (via "open -a") |
+| `slash` | `c`        | Code             | macOS (via "open -a") |
+| `slash` | `f`        | Figma            | macOS (via "open -a") |
+| `slash` | `i`        | iTerm            | macOS (via "open -a") |
+| `slash` | `m`        | Mail             | macOS (via "open -a") |
+| `slash` | `o`        | Obsidian         | macOS (via "open -a") |
+| `slash` | `s`        | Slack            | macOS (via "open -a") |
+| `slash` | `t`        | Things           | macOS (via "open -a") |
+| `slash` | `comma`    | macOS Settings   | macOS (via "open -a") |
+| `slash` | `spacebar` | Finder           | macOS (via "open -a") |
 
 
 ## Monitoring
