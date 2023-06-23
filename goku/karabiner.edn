@@ -126,10 +126,10 @@
         [:h "/usr/local/bin/yabai -m window --warp east" ["windows-layer" 1]]
 
         ; resize window region (north/west/south/east)
-        [:i "/usr/local/bin/yabai -m window --resize top:0:-40 && /usr/local/bin/yabai -m window --resize bottom:0:-40" ["windows-layer" 1]]
-        [:j "/usr/local/bin/yabai -m window --resize left:-40:0 && /usr/local/bin/yabai -m window --resize right:-40:0" ["windows-layer" 1]]
-        [:k "/usr/local/bin/yabai -m window --resize top:0:40 && /usr/local/bin/yabai -m window --resize bottom:0:40" ["windows-layer" 1]]
-        [:l "/usr/local/bin/yabai -m window --resize left:40:0 && /usr/local/bin/yabai -m window --resize right:40:0" ["windows-layer" 1]]
+        [:i "/usr/local/bin/yabai -m window --resize top:0:-200 && /usr/local/bin/yabai -m window --resize bottom:0:-200" ["windows-layer" 1]]
+        [:j "/usr/local/bin/yabai -m window --resize left:-200:0 && /usr/local/bin/yabai -m window --resize right:-200:0" ["windows-layer" 1]]
+        [:k "/usr/local/bin/yabai -m window --resize top:0:200 && /usr/local/bin/yabai -m window --resize bottom:0:200" ["windows-layer" 1]]
+        [:l "/usr/local/bin/yabai -m window --resize left:200:0 && /usr/local/bin/yabai -m window --resize right:200:0" ["windows-layer" 1]]
 
         ; toggle window tiling (float/tiled)
         [:delete_or_backspace "/usr/local/bin/yabai -m window --toggle float && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
