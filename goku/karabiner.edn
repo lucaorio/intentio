@@ -98,41 +98,41 @@
         [:z ["windows-layer" 1] nil {:afterup ["windows-layer" 0] :alone :z}]
 
         ; move window to space (n)
-        [:1 "/usr/local/bin/yabai -m window --space 1" ["windows-layer" 1]]
-        [:2 "/usr/local/bin/yabai -m window --space 2" ["windows-layer" 1]]
-        [:3 "/usr/local/bin/yabai -m window --space 3" ["windows-layer" 1]]
-        [:4 "/usr/local/bin/yabai -m window --space 4" ["windows-layer" 1]]
-        [:5 "/usr/local/bin/yabai -m window --space 5" ["windows-layer" 1]]
-        [:6 "/usr/local/bin/yabai -m window --space 6" ["windows-layer" 1]]
-        [:7 "/usr/local/bin/yabai -m window --space 7" ["windows-layer" 1]]
-        [:8 "/usr/local/bin/yabai -m window --space 8" ["windows-layer" 1]]
-        [:9 "/usr/local/bin/yabai -m window --space 9" ["windows-layer" 1]]
-        [:0 "/usr/local/bin/yabai -m window --space 10" ["windows-layer" 1]]
+        [:1 "/opt/homebrew/bin/yabai -m window --space 1" ["windows-layer" 1]]
+        [:2 "/opt/homebrew/bin/yabai -m window --space 2" ["windows-layer" 1]]
+        [:3 "/opt/homebrew/bin/yabai -m window --space 3" ["windows-layer" 1]]
+        [:4 "/opt/homebrew/bin/yabai -m window --space 4" ["windows-layer" 1]]
+        [:5 "/opt/homebrew/bin/yabai -m window --space 5" ["windows-layer" 1]]
+        [:6 "/opt/homebrew/bin/yabai -m window --space 6" ["windows-layer" 1]]
+        [:7 "/opt/homebrew/bin/yabai -m window --space 7" ["windows-layer" 1]]
+        [:8 "/opt/homebrew/bin/yabai -m window --space 8" ["windows-layer" 1]]
+        [:9 "/opt/homebrew/bin/yabai -m window --space 9" ["windows-layer" 1]]
+        [:0 "/opt/homebrew/bin/yabai -m window --space 10" ["windows-layer" 1]]
 
         ; move window to new space (and focus on it or not)
-        [:hyphen "/usr/local/bin/yabai -m space --create && /usr/local/bin/yabai -m window --space last" ["windows-layer" 1]]
-        [:equal_sign "/usr/local/bin/yabai -m space --create && /usr/local/bin/yabai -m window --space last; /usr/local/bin/yabai -m space --focus last" ["windows-layer" 1]]
+        [:hyphen "/opt/homebrew/bin/yabai -m space --create && /opt/homebrew/bin/yabai -m window --space last" ["windows-layer" 1]]
+        [:equal_sign "/opt/homebrew/bin/yabai -m space --create && /opt/homebrew/bin/yabai -m window --space last; /opt/homebrew/bin/yabai -m space --focus last" ["windows-layer" 1]]
 
         ; swap window position (north/west/south/east)
-        [:w "/usr/local/bin/yabai -m window --swap north" ["windows-layer" 1]]
-        [:a "/usr/local/bin/yabai -m window --swap west" ["windows-layer" 1]]
-        [:s "/usr/local/bin/yabai -m window --swap south" ["windows-layer" 1]]
-        [:d "/usr/local/bin/yabai -m window --swap east" ["windows-layer" 1]]
+        [:w "/opt/homebrew/bin/yabai -m window --swap north" ["windows-layer" 1]]
+        [:a "/opt/homebrew/bin/yabai -m window --swap west" ["windows-layer" 1]]
+        [:s "/opt/homebrew/bin/yabai -m window --swap south" ["windows-layer" 1]]
+        [:d "/opt/homebrew/bin/yabai -m window --swap east" ["windows-layer" 1]]
 
         ; warp window insertion (north/west/south/east)
-        [:t "/usr/local/bin/yabai -m window --warp north" ["windows-layer" 1]]
-        [:f "/usr/local/bin/yabai -m window --warp west" ["windows-layer" 1]]
-        [:g "/usr/local/bin/yabai -m window --warp south" ["windows-layer" 1]]
-        [:h "/usr/local/bin/yabai -m window --warp east" ["windows-layer" 1]]
+        [:t "/opt/homebrew/bin/yabai -m window --warp north" ["windows-layer" 1]]
+        [:f "/opt/homebrew/bin/yabai -m window --warp west" ["windows-layer" 1]]
+        [:g "/opt/homebrew/bin/yabai -m window --warp south" ["windows-layer" 1]]
+        [:h "/opt/homebrew/bin/yabai -m window --warp east" ["windows-layer" 1]]
 
         ; resize window region (north/west/south/east)
-        [:i "/usr/local/bin/yabai -m window --resize top:0:-200 && /usr/local/bin/yabai -m window --resize bottom:0:-200" ["windows-layer" 1]]
-        [:j "/usr/local/bin/yabai -m window --resize left:-200:0 && /usr/local/bin/yabai -m window --resize right:-200:0" ["windows-layer" 1]]
-        [:k "/usr/local/bin/yabai -m window --resize top:0:200 && /usr/local/bin/yabai -m window --resize bottom:0:200" ["windows-layer" 1]]
-        [:l "/usr/local/bin/yabai -m window --resize left:200:0 && /usr/local/bin/yabai -m window --resize right:200:0" ["windows-layer" 1]]
+        [:i "/opt/homebrew/bin/yabai -m window --resize top:0:-200 && /opt/homebrew/bin/yabai -m window --resize bottom:0:-200" ["windows-layer" 1]]
+        [:j "/opt/homebrew/bin/yabai -m window --resize left:-200:0 && /opt/homebrew/bin/yabai -m window --resize right:-200:0" ["windows-layer" 1]]
+        [:k "/opt/homebrew/bin/yabai -m window --resize top:0:200 && /opt/homebrew/bin/yabai -m window --resize bottom:0:200" ["windows-layer" 1]]
+        [:l "/opt/homebrew/bin/yabai -m window --resize left:200:0 && /opt/homebrew/bin/yabai -m window --resize right:200:0" ["windows-layer" 1]]
 
         ; toggle window tiling (float/tiled)
-        [:delete_or_backspace "/usr/local/bin/yabai -m window --toggle float && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
+        [:delete_or_backspace "/opt/homebrew/bin/yabai -m window --toggle float && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
 
         ; float and resize window to center/rectangular
         [:p "~/.config/shscripts/resize-center-mini.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
@@ -147,16 +147,16 @@
         [:backslash "~/.config/shscripts/resize-fullscreen.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
 
         ; re-focus most recent active window
-        [:return_or_enter "/usr/local/bin/yabai -m window --focus recent" ["windows-layer" 1]]
+        [:return_or_enter "/opt/homebrew/bin/yabai -m window --focus recent" ["windows-layer" 1]]
 
         ; toggle sticky mode
         [:slash "~/.config/shscripts/toggle-sticky.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
 
         ; focus window (north/west/south/east)
-        [:up_arrow "/usr/local/bin/yabai -m window --focus north" ["windows-layer" 1]]
-        [:left_arrow "/usr/local/bin/yabai -m window --focus west" ["windows-layer" 1]]
-        [:down_arrow "/usr/local/bin/yabai -m window --focus south" ["windows-layer" 1]]
-        [:right_arrow "/usr/local/bin/yabai -m window --focus east" ["windows-layer" 1]]
+        [:up_arrow "/opt/homebrew/bin/yabai -m window --focus north" ["windows-layer" 1]]
+        [:left_arrow "/opt/homebrew/bin/yabai -m window --focus west" ["windows-layer" 1]]
+        [:down_arrow "/opt/homebrew/bin/yabai -m window --focus south" ["windows-layer" 1]]
+        [:right_arrow "/opt/homebrew/bin/yabai -m window --focus east" ["windows-layer" 1]]
 
         ; flash focused window
         [:spacebar "~/.config/shscripts/flash-focused.sh" ["windows-layer" 1]]
@@ -170,43 +170,43 @@
         [:x ["spaces-layer" 1] nil {:afterup ["spaces-layer" 0] :alone :x}]
 
         ; focus space (n)
-        [:1 "/usr/local/bin/yabai -m space --focus 1" ["spaces-layer" 1]]
-        [:2 "/usr/local/bin/yabai -m space --focus 2" ["spaces-layer" 1]]
-        [:3 "/usr/local/bin/yabai -m space --focus 3" ["spaces-layer" 1]]
-        [:4 "/usr/local/bin/yabai -m space --focus 4" ["spaces-layer" 1]]
-        [:5 "/usr/local/bin/yabai -m space --focus 5" ["spaces-layer" 1]]
-        [:6 "/usr/local/bin/yabai -m space --focus 6" ["spaces-layer" 1]]
-        [:7 "/usr/local/bin/yabai -m space --focus 7" ["spaces-layer" 1]]
-        [:8 "/usr/local/bin/yabai -m space --focus 8" ["spaces-layer" 1]]
-        [:9 "/usr/local/bin/yabai -m space --focus 9" ["spaces-layer" 1]]
-        [:0 "/usr/local/bin/yabai -m space --focus 10" ["spaces-layer" 1]]
+        [:1 "/opt/homebrew/bin/yabai -m space --focus 1" ["spaces-layer" 1]]
+        [:2 "/opt/homebrew/bin/yabai -m space --focus 2" ["spaces-layer" 1]]
+        [:3 "/opt/homebrew/bin/yabai -m space --focus 3" ["spaces-layer" 1]]
+        [:4 "/opt/homebrew/bin/yabai -m space --focus 4" ["spaces-layer" 1]]
+        [:5 "/opt/homebrew/bin/yabai -m space --focus 5" ["spaces-layer" 1]]
+        [:6 "/opt/homebrew/bin/yabai -m space --focus 6" ["spaces-layer" 1]]
+        [:7 "/opt/homebrew/bin/yabai -m space --focus 7" ["spaces-layer" 1]]
+        [:8 "/opt/homebrew/bin/yabai -m space --focus 8" ["spaces-layer" 1]]
+        [:9 "/opt/homebrew/bin/yabai -m space --focus 9" ["spaces-layer" 1]]
+        [:0 "/opt/homebrew/bin/yabai -m space --focus 10" ["spaces-layer" 1]]
 
         ; create/destroy space
         [:hyphen "~/.config/shscripts/focus-and-destroy.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
-        [:equal_sign "/usr/local/bin/yabai -m space --create && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:equal_sign "/opt/homebrew/bin/yabai -m space --create && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
 
         ; change space layout (floating[flt]/tiled[bsp])
-        [:delete_or_backspace "/usr/local/bin/yabai -m space --layout float && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
-        [:backslash "/usr/local/bin/yabai -m space --layout bsp && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:delete_or_backspace "/opt/homebrew/bin/yabai -m space --layout float && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:backslash "/opt/homebrew/bin/yabai -m space --layout bsp && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
 
         ; move space (left/right)
-        [:open_bracket "/usr/local/bin/yabai -m space --move prev && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
-        [:close_bracket "/usr/local/bin/yabai -m space --move next && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:open_bracket "/opt/homebrew/bin/yabai -m space --move prev && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:close_bracket "/opt/homebrew/bin/yabai -m space --move next && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
 
         ; focus space (most recently focused)
-        [:return_or_enter "/usr/local/bin/yabai -m space --focus recent" ["spaces-layer" 1]]
+        [:return_or_enter "/opt/homebrew/bin/yabai -m space --focus recent" ["spaces-layer" 1]]
 
         ; rotate (90deg), flip (horizontal/vertical), and balance space layout
-        [:m "/usr/local/bin/yabai -m space --rotate 90" ["spaces-layer" 1]]
-        [:comma "/usr/local/bin/yabai -m space --mirror x-axis" ["spaces-layer" 1]]
-        [:period "/usr/local/bin/yabai -m space --mirror y-axis" ["spaces-layer" 1]]
-        [:slash "/usr/local/bin/yabai -m space --balance" ["spaces-layer" 1]]
+        [:m "/opt/homebrew/bin/yabai -m space --rotate 90" ["spaces-layer" 1]]
+        [:comma "/opt/homebrew/bin/yabai -m space --mirror x-axis" ["spaces-layer" 1]]
+        [:period "/opt/homebrew/bin/yabai -m space --mirror y-axis" ["spaces-layer" 1]]
+        [:slash "/opt/homebrew/bin/yabai -m space --balance" ["spaces-layer" 1]]
 
         ; trigger mission control and show desktop, focus space (previous/next)
-        [:up_arrow "/usr/local/bin/yabai -m space --toggle mission-control" ["spaces-layer" 1]]
-        [:left_arrow "/usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m space --focus last" ["spaces-layer" 1]]
-        [:right_arrow "/usr/local/bin/yabai -m space --focus next || /usr/local/bin/yabai -m space --focus first" ["spaces-layer" 1]]
-        [:down_arrow "/usr/local/bin/yabai -m space --toggle show-desktop" ["spaces-layer" 1]]
+        [:up_arrow "/opt/homebrew/bin/yabai -m space --toggle mission-control" ["spaces-layer" 1]]
+        [:left_arrow "/opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last" ["spaces-layer" 1]]
+        [:right_arrow "/opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first" ["spaces-layer" 1]]
+        [:down_arrow "/opt/homebrew/bin/yabai -m space --toggle show-desktop" ["spaces-layer" 1]]
       ]
     }
 
