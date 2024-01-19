@@ -28,6 +28,7 @@
     ]
     :keychron [
       {:vendor_id 1452 :product_id 591}
+      {:vendor_id 13364 :product_id 611}
     ]
   }
 
