@@ -233,7 +233,7 @@
 
         ; hyper + ,./ to playback media keys
         [:!!open_bracket :rewind]
-        [:!!close_bracket :fastforward]
+        [:!!close_bracket :fast_forward]
         [:!!backslash :play_or_pause]
       ]
     }
