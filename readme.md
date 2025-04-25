@@ -128,8 +128,8 @@ Other kinds of shortcuts are more general and utilitiarian in their nature.
 | `hyper`   | `d`               | Define Word                               | Raycast                 |
 | `hyper`   | `g`               | ChatGPT - Ask Question                    | Raycast                 |
 | `hyper`   | `n`               | Raycast Notes                             | Raycast                 |
-| `hyper`   | `p`               | Quicklinks - Search DuckDuckGo            | Raycast                 |
-| `hyper`   | `s`               | Quicklinks - Polish Content (via ChatGPT) | Raycast                 |
+| `hyper`   | `p`               | Quicklinks - Polish Content (via ChatGPT) | Raycast                 |
+| `hyper`   | `s`               | Quicklinks - Search DuckDuckGo            | Raycast                 |
 | `hyper`   | `t`               | Google Translate - Translate              | Raycast                 |
 | `hyper`   | `v`               | Toggle Mini Recorder                      | VoiceInk                |
 
