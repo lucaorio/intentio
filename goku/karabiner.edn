@@ -245,16 +245,20 @@
         [:slash ["launch-layer" 1] nil {:afterup ["launch-layer" 0] :alone :slash}]
 
         ; open apps
+        [:1 "open -a 1Password" ["launch-layer" 1]]
         [:a "open -a Music" ["launch-layer" 1]]
         [:b "open -a Safari" ["launch-layer" 1]]
-        [:c "open -a 'Visual Studio Code'" ["launch-layer" 1]]
+        [:c "open -a Calendar" ["launch-layer" 1]]
         [:f "open -a Figma" ["launch-layer" 1]]
+        [:g "open -a 'Google Chrome'" ["launch-layer" 1]]
         [:i "open -a iTerm" ["launch-layer" 1]]
         [:m "open -a Mail" ["launch-layer" 1]]
         [:o "open -a Obsidian" ["launch-layer" 1]]
+        [:r "open -a Roon" ["launch-layer" 1]]
         [:s "open -a Slack" ["launch-layer" 1]]
         [:t "open -a Things3" ["launch-layer" 1]]
-        [:comma "open -a 'System Preferences'" ["launch-layer" 1]]
+        [:v "open -a 'Visual Studio Code'" ["launch-layer" 1]]
+        [:comma "open -a 'System Settings'" ["launch-layer" 1]]
         [:spacebar "open -a Finder" ["launch-layer" 1]]
       ]
     }
