@@ -18,9 +18,10 @@
 
 {
   :devices {
-    :applekbd [
+    :apple [
       {:vendor_id 1452 :product_id 632}
       {:vendor_id 1452 :product_id 832}
+      {:is_built_in_keyboard true}
     ]
     :keychron [
       {:vendor_id 1452 :product_id 591}
@@ -30,24 +31,24 @@
 
   :main [
     {
-      ; rules for the apple keyboard to loosely map a pok3r layout
-      :des "applepok3r"
+      ; rules for the apple keyboard to loosely map a 60%/75% layout
+      :des "apple"
       :rules [
         ; remap right alt (option) and gui (command) to hyper
-        [:right_alt :!CTOleft_shift :applekbd]
-        [:right_gui :!CTOleft_shift :applekbd]
+        [:right_alt :!CTOleft_shift :apple]
+        [:right_gui :!CTOleft_shift :apple]
 
         ; remap fn to left ctrl
-        [:fn :left_control :applekbd]
+        [:fn :left_control :apple]
 
         ; remap caps lock to fn
-        [:caps_lock :fn :applekbd]
+        [:caps_lock :fn :apple]
 
         ; hyper + escape to grave accent (`)
-        [:!!escape :grave_accent_and_tilde :applekbd]
+        [:!!escape :grave_accent_and_tilde :apple]
 
         ; hyper + shift + escape to tilde (~)
-        [:!!Sescape :!Sgrave_accent_and_tilde :applekbd]
+        [:!!Sescape :!Sgrave_accent_and_tilde :apple]
       ]
     }
 
@@ -202,8 +203,10 @@
         [:!!slash :mute]
 
         ; hyper + ; or ' to increase/decrease brightness (in small increments)
-        [:!!semicolon :!OSscroll_lock]
-        [:!!quote :!OSpause]
+        [:!!semicolon :!OSdisplay_brightness_decrement :apple] ; native keyboard
+        [:!!quote :!OSdisplay_brightness_increment :apple] ;native keyboard
+        [:!!semicolon :!OSscroll_lock :keychron] ;keychron keyboard
+        [:!!quote :!OSpause :keychron] ;keychron keyboard
 
         ; hyper + enter to turn on do not disturb mode (cmd+opt+d in sys settings)
         [:!!return_or_enter :!COd]
