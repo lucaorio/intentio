@@ -110,11 +110,6 @@
         [:k "/opt/homebrew/bin/yabai -m window --resize top:0:200 || /opt/homebrew/bin/yabai -m window --resize bottom:0:200" ["windows-layer" 1]]
         [:l "/opt/homebrew/bin/yabai -m window --resize left:200:0 || /opt/homebrew/bin/yabai -m window --resize right:200:0" ["windows-layer" 1]]
 
-        ;; [:i "/opt/homebrew/bin/yabai -m window --resize top:0:-200 && /opt/homebrew/bin/yabai -m window --resize bottom:0:-200" ["windows-layer" 1]]
-        ;; [:j "/opt/homebrew/bin/yabai -m window --resize left:-200:0 && /opt/homebrew/bin/yabai -m window --resize right:-200:0" ["windows-layer" 1]]
-        ;; [:k "/opt/homebrew/bin/yabai -m window --resize top:0:200 && /opt/homebrew/bin/yabai -m window --resize bottom:0:200" ["windows-layer" 1]]
-        ;; [:l "/opt/homebrew/bin/yabai -m window --resize left:200:0 && /opt/homebrew/bin/yabai -m window --resize right:200:0" ["windows-layer" 1]]
-
         ; toggle window tiling (float/tiled)
         [:delete_or_backspace "/opt/homebrew/bin/yabai -m window --toggle float && ~/.config/shscripts/refresh-uebersicht.sh" ["windows-layer" 1]]
 
@@ -208,7 +203,7 @@
         [:!!semicolon :!OSscroll_lock :keychron] ;keychron keyboard
         [:!!quote :!OSpause :keychron] ;keychron keyboard
 
-        ; hyper + enter to turn on do not disturb mode (cmd+opt+d in sys settings)
+        ; hyper + enter to turn on do not disturb mode (cmd+opt+d in sys settings, with dock shortcut disabled)
         [:!!return_or_enter :!COd]
 
         ; hyper + ,./ to playback media keys
