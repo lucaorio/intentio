@@ -190,7 +190,7 @@
     }
 
    {
-      :des "media-layer"
+      :des "utility-layer"
       :rules [
         ; hyper + ,./ to audio media keys (in small increments)
         [:!!comma :!OSvolume_decrement]
