@@ -131,6 +131,7 @@ Other kinds of shortcuts are more general and utilitiarian in their nature.
 | `hyper`   | `p`               | Quicklinks - Search DuckDuckGo            | Raycast                 |
 | `hyper`   | `s`               | Quicklinks - Polish Content (via ChatGPT) | Raycast                 |
 | `hyper`   | `t`               | Google Translate - Translate              | Raycast                 |
+| `hyper`   | `v`               | Toggle Mini Recorder                      | VoiceInk                |
 
 > Define the `hyper` key in the keyboard profile specified at the top of the Goku configuration.
 
