@@ -22,18 +22,10 @@
       {:vendor_id 1452 :product_id 632}
       {:vendor_id 1452 :product_id 832}
     ]
-    :pok3rkbd [
-      {:vendor_id 1241 :product_id 321}
-      {:vendor_id 1241 :product_id 519}
-    ]
     :keychron [
       {:vendor_id 1452 :product_id 591}
       {:vendor_id 13364 :product_id 611}
     ]
-  }
-
-  :applications {
-    :term ["^com\\.googlecode\\.iterm2$"]
   }
 
   :main [
@@ -56,21 +48,6 @@
 
         ; hyper + shift + escape to tilde (~)
         [:!!Sescape :!Sgrave_accent_and_tilde :applekbd]
-      ]
-    }
-
-    {
-      ; rules applicable solely to the pok3r keyboard
-      :des "pok3r"
-      :rules [
-        ; remap right alt (option)
-        [:right_alt :!CTOleft_shift :pok3rkbd]
-
-        ; hyper + escape to grave accent (`)
-        [:!!escape :grave_accent_and_tilde :pok3rkbd]
-
-        ; hyper + shift + escape to tilde (~)
-        [:!!Sescape :!Sgrave_accent_and_tilde :pok3rkbd]
       ]
     }
 
