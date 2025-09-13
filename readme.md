@@ -112,26 +112,26 @@ Other kinds of shortcuts are more general and utilitiarian in their nature.
 
 ![Utility layer](images/utility-layer.jpg)
 
-| Trigger   | Hotkey            | Action                                    | Target                  |
-|-----------|-------------------|-------------------------------------------|-------------------------|
-| `hyper`   | `open_bracket`    | Previous media track                      | macOS                   |
-| `hyper`   | `close_bracket`   | Next media track                          | macOS                   |
-| `hyper`   | `backslash`       | Play/pause current track                  | macOS                   |
-| `hyper`   | `semicolon`       | Decrease brightness (in small increments) | macOS                   |
-| `hyper`   | `quote`           | Increase brightness (in small increments) | macOS                   |
-| `hyper`   | `return_or_enter` | Toggle Do Not Disturb mode                | macOS (custom shortcut) |
-| `hyper`   | `comma`           | Decrease volume (in small increments)     | macOS                   |
-| `hyper`   | `period`          | Increase volume (in small increments)     | macOS                   |
-| `hyper`   | `slash`           | Mute volume                               | macOS                   |
-| `hyper`   | `1`               | 1Password - My Passwords                  | Raycast                 |
-| `hyper`   | `c`               | ChatGPT - Conversations                   | Raycast                 |
-| `hyper`   | `d`               | Define Word                               | Raycast                 |
-| `hyper`   | `g`               | ChatGPT - Ask Question                    | Raycast                 |
-| `hyper`   | `n`               | Raycast Notes                             | Raycast                 |
-| `hyper`   | `p`               | Quicklinks - Polish Content (via ChatGPT) | Raycast                 |
-| `hyper`   | `s`               | Quicklinks - Search DuckDuckGo            | Raycast                 |
-| `hyper`   | `t`               | Google Translate - Translate              | Raycast                 |
-| `hyper`   | `v`               | Toggle Mini Recorder                      | VoiceInk                |
+| Trigger | Hotkey            | Action                                    | Target                  |
+|---------|-------------------|-------------------------------------------|-------------------------|
+| `hyper` | `open_bracket`    | Previous media track                      | macOS                   |
+| `hyper` | `close_bracket`   | Next media track                          | macOS                   |
+| `hyper` | `backslash`       | Play/pause current track                  | macOS                   |
+| `hyper` | `semicolon`       | Decrease brightness (in small increments) | macOS                   |
+| `hyper` | `quote`           | Increase brightness (in small increments) | macOS                   |
+| `hyper` | `return_or_enter` | Toggle Do Not Disturb mode                | macOS (custom shortcut) |
+| `hyper` | `comma`           | Decrease volume (in small increments)     | macOS                   |
+| `hyper` | `period`          | Increase volume (in small increments)     | macOS                   |
+| `hyper` | `slash`           | Mute volume                               | macOS                   |
+| `hyper` | `1`               | 1Password - My Passwords                  | Raycast                 |
+| `hyper` | `c`               | ChatGPT - Conversations                   | Raycast                 |
+| `hyper` | `d`               | Define Word                               | Raycast                 |
+| `hyper` | `g`               | ChatGPT - Ask Question                    | Raycast                 |
+| `hyper` | `n`               | Raycast Notes                             | Raycast                 |
+| `hyper` | `p`               | Quicklinks - Polish Content (via ChatGPT) | Raycast                 |
+| `hyper` | `s`               | Quicklinks - Search DuckDuckGo            | Raycast                 |
+| `hyper` | `t`               | Google Translate - Translate              | Raycast                 |
+| `hyper` | `v`               | Toggle Mini Recorder                      | VoiceInk                |
 
 > Define the `hyper` key in the keyboard profile specified at the top of the Goku configuration.
 
@@ -140,23 +140,23 @@ The launch layer bypasses tools like Raycast or Alfred to speed up the opening o
 
 ![Launch layer](images/launch-layer.jpg)
 
-| Trigger | Hotkey     | Action             | Target                |
-|---------|------------|--------------------|-----------------------|
-| `slash` | `1`        | 1Password          | macOS                 |
-| `slash` | `a`        | "Apple" Music      | macOS                 |
-| `slash` | `b`        | "Browser" Safari   | macOS                 |
-| `slash` | `c`        | Calendar           | macOS                 |
-| `slash` | `f`        | Figma              | macOS                 |
-| `slash` | `g`        | "Google" Chrome    | macOS                 |
-| `slash` | `i`        | iTerm              | macOS                 |
-| `slash` | `m`        | Mail               | macOS                 |
-| `slash` | `o`        | Obsidian           | macOS                 |
-| `slash` | `r`        | Roon               | macOS                 |
-| `slash` | `s`        | Slack              | macOS                 |
-| `slash` | `t`        | Things             | macOS                 |
-| `slash` | `v`        | Visual Studio Code | macOS                 |
-| `slash` | `comma`    | System Settings    | macOS                 |
-| `slash` | `spacebar` | Finder             | macOS                 |
+| Trigger | Hotkey            | Action             | Target |
+|---------|-------------------|--------------------|--------|
+| `slash` | `1`               | 1Password          | macOS  |
+| `slash` | `a`               | "Apple" Music      | macOS  |
+| `slash` | `b`               | "Browser" Safari   | macOS  |
+| `slash` | `c`               | Calendar           | macOS  |
+| `slash` | `f`               | Figma              | macOS  |
+| `slash` | `g`               | "Google" Chrome    | macOS  |
+| `slash` | `m`               | Mail               | macOS  |
+| `slash` | `o`               | Obsidian           | macOS  |
+| `slash` | `r`               | Roon               | macOS  |
+| `slash` | `s`               | Slack              | macOS  |
+| `slash` | `t`               | Things             | macOS  |
+| `slash` | `v`               | Visual Studio Code | macOS  |
+| `slash` | `return_or_enter` | Ghostty            | macOS  |
+| `slash` | `comma`           | System Settings    | macOS  |
+| `slash` | `spacebar`        | Finder             | macOS  |
 
 
 ## Monitoring
