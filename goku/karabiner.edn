@@ -162,7 +162,7 @@
 
         ; create/destroy space
         [:hyphen "~/.config/shscripts/focus-and-destroy.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
-        [:equal_sign "/opt/homebrew/bin/yabai -m space --create && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
+        [:equal_sign "~/.config/shscripts/create-adjacent.sh && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]
 
         ; change space layout (floating[flt]/tiled[bsp])
         [:delete_or_backspace "/opt/homebrew/bin/yabai -m space --layout float && ~/.config/shscripts/refresh-uebersicht.sh" ["spaces-layer" 1]]

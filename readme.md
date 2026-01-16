@@ -90,7 +90,7 @@ The spaces layer focuses on triggering Yabai space-related commands and, in some
 | Trigger | Hotkey                | Action                               | Target               |
 |---------|-----------------------|--------------------------------------|----------------------|
 | `x`     | `1` `2` .. `0`        | Focus space (n)                      | Yabai                |
-| `x`     | `hyphen`              | Create new space                     | Yabai                |
+| `x`     | `hyphen`              | Create and focus new adjacent space  | create-adjacent.sh   |
 | `x`     | `equal_sign`          | Destroy current space                | focus-and-destroy.sh |
 | `x`     | `delete_or_backspace` | Change space layout (floating - flt) | Yabai                |
 | `x`     | `backslash`           | Change space layout (tiled - bsp)    | Yabai                |
